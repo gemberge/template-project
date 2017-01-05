@@ -1,4 +1,4 @@
-package com.template.core;
+package com.template;
 
 import java.util.Arrays;
 import org.springframework.boot.CommandLineRunner;

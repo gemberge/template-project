@@ -1,5 +1,6 @@
 package com.template.core;
 
+import com.template.Application;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 

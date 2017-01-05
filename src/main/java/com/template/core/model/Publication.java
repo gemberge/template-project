@@ -73,4 +73,17 @@ public class Publication extends BaseEntity {
     public void setCover(Cover cover) {
         this.cover = cover;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Publication{");
+        sb.append("id=").append(id);
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", description='").append(description).append('\'');
+        sb.append(", cover=").append(cover);
+        sb.append(", content='").append(content).append('\'');
+        sb.append(", author=").append(author);
+        sb.append('}');
+        return sb.toString();
+    }
 }

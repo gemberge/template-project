@@ -39,4 +39,14 @@ public class Cover extends BaseEntity {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Cover{");
+        sb.append("id=").append(id);
+        sb.append(", quote='").append(quote).append('\'');
+        sb.append(", imageUrl='").append(imageUrl).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

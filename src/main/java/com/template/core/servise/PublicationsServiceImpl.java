@@ -1,6 +1,5 @@
 package com.template.core.servise;
 
-import com.template.core.model.Cover;
 import com.template.core.model.Person;
 import com.template.core.model.Publication;
 import com.template.core.model.WebException;
@@ -35,6 +34,11 @@ public class PublicationsServiceImpl {
         Publication result = publicationsRepository.findOne(id);
         validator.notNull(result, HttpStatus.NOT_FOUND, "There isn't publication with such id");
         return result;
+    }
+
+    public List<Publication> findByAuthor(Person author) throws WebException {
+        validator.notNull(author, HttpStatus.BAD_REQUEST, "Author should be specified");
+        return publicationsRepository.findByAuthor(author);
     }
 
     public Publication post(Publication publication, Long authorId) throws WebException {
